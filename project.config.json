@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
 	"appid": "wxcc6e3ac0912b7744",
-	"projectname": "loginTest",
+	"projectname": "FirstTest",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
