@@ -69,6 +69,11 @@ Page({
         hasUserInfo: true,
         motto: "welcome!"
       })
+      setTimeout(function () {
+        wx.navigateTo({
+          url: '../login/login'
+        })
+      }, 1000)
     }else {
       app.globalData.userInfo = null
       this.setData({
