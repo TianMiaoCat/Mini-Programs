@@ -13,7 +13,7 @@ App({
         if (res.code) {
           console.log(res.code)
           wx.request({
-            url: 'http://localhost:8080/getOpenid',
+            url: 'http://qr.nobler.xyz:8082/test?code='+res.code+'',
             data: {
               code: res.code
             },
@@ -22,6 +22,7 @@ App({
               'content-type': 'application/json'
             },
             success: function (res) {
+              console.log(res)
               console.log("请求成功！")
             },
             fail: function (res) {
@@ -55,6 +56,12 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    signid: null,
+    courseid: null,
+    key: null,
+    code: null,
+    studentid: null,
+    name: null
   }
 })

@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Daily签',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -12,18 +12,19 @@ Page({
   //事件处理函数
    bindViewTap: function() {
      wx.navigateTo({
-       url: '../login/login'
+       url: '../signin/signin'
      })
    },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo: true,
+        motto: "Welcome!"
       })
       setTimeout(function () {
         wx.navigateTo({
-          url: '../login/login'
+          url: '../signin/signin'
         })
       }, 1000)
     } else if (this.data.canIUse){
@@ -32,11 +33,12 @@ Page({
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true
+          hasUserInfo: true,
+          motto: "Welcome!"
         })
         setTimeout(function () {
           wx.navigateTo({
-            url: '../login/login'
+            url: '../signin/signin'
           })
         }, 1000)
       }
@@ -71,7 +73,7 @@ Page({
       })
       setTimeout(function () {
         wx.navigateTo({
-          url: '../login/login'
+          url: '../signin/signin'
         })
       }, 1000)
     }else {
