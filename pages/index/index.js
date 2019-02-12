@@ -15,7 +15,10 @@ Page({
        url: '../signin/signin'
      })
    },
-  onLoad: function () {
+  onLoad: function (options) {
+    app.globalData.courseid = options.courseid
+    app.globalData.signinid = options.signinid
+    app.globalData.key = options.key
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

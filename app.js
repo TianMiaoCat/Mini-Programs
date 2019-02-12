@@ -11,26 +11,10 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
-          console.log(res.code)
-          wx.request({
-            url: 'http://qr.nobler.xyz:8082/test?code='+res.code+'',
-            data: {
-              code: res.code
-            },
-            method: 'get',
-            header: {
-              'content-type': 'application/json'
-            },
-            success: function (res) {
-              console.log(res)
-              console.log("请求成功！")
-            },
-            fail: function (res) {
-              console.log("请求失败！")
-            }
-          })
+          this.globalData.code = res.code
+          console.log(this.globalData.code)
         } else {
-          console.log("登录失败！")
+          console.log("签到失败！")
         }
       }
     })
@@ -57,11 +41,9 @@ App({
   },
   globalData: {
     userInfo: null,
-    signid: null,
+    signinid: null,
     courseid: null,
     key: null,
-    code: null,
-    studentid: null,
-    name: null
+    code: null
   }
 })

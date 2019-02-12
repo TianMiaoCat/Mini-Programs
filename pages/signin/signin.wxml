@@ -3,15 +3,15 @@
 <view class="content">
   <view class="account">
     <view class="title">学号</view>
-    <view class="num"><input bindinput="accountInput" placeholder="请输入学号" placeholder-style="color:#999999;"/></view>
+    <view class="num"><input bindinput="numInput" placeholder="请输入学号" placeholder-style="color:#999999;"/></view>
   </view>
   <view class="hr"></view>
    <view class="account">
     <view class="title">姓名</view>
-    <view class="num"><input bindblur="pwdBlur" placeholder="请输入姓名" password placeholder-style="color:#999999;"/></view>
+    <view class="num"><input bindblur="nameInput" placeholder="请输入姓名" placeholder-style="color:#999999;"/></view>
     
   </view>
   <view class="hr"></view>
-  <button class="btn" bindtap='login' type="primary">签到</button>
+  <button class="btn" bindtap='signin' type="primary">签到</button>
 </view>
 <view>{{message}}</view>

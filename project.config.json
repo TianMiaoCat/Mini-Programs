@@ -40,10 +40,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "signin",
 					"pathName": "pages/index/index",
-					"query": "signinid=145&courseid=73&key=26927",
+					"query": "signinid=152&courseid=141&key=47483",
 					"scene": 1011
 				}
 			]
