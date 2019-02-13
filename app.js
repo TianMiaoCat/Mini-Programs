@@ -14,7 +14,7 @@ App({
           this.globalData.code = res.code
           console.log(this.globalData.code)
         } else {
-          console.log("签到失败！")
+          console.log("失败！")
         }
       }
     })
